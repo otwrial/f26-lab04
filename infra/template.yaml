@@ -103,7 +103,7 @@ Resources:
           docker run -d \
             --name lab04-service \
             --restart unless-stopped \
-            -p ${ServicePort}:${ServicePort} \
+            -p ${ServicePort}:$EFFECTIVE_PORT \
             -e PORT="$EFFECTIVE_PORT" \
             ${ImageUrl}
 
